@@ -5,8 +5,8 @@
   tasks:
     - name: Check if already installed
       win_stat:
-        path: C:\Program Files\Notepad++
-otepad++.exe
+        path: 'C:\Program Files\Notepad++
+otepad++.exe'
       register: npp_installed
 
     - name: Copy installer to WorkSpace
@@ -26,6 +26,6 @@ pp_installer.exe
 
     - name: Clean up installer
       win_file:
-        path: C:\temp
-pp_installer.exe
+        path: 'C:\temp
+pp_installer.exe'
         state: absent
