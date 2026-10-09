@@ -1,0 +1,9 @@
+---
+- name: Test AWX Connection
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Create test file on C drive
+      win_copy:
+        content: "AWX is working"
+        dest: C:\awx-test.txt
