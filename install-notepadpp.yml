@@ -12,14 +12,14 @@ otepad++.exe'
     - name: Copy installer to WorkSpace
       win_copy:
         src: files/npp.8.9.8.Installer.x64.exe
-        dest: C:\temp
-pp_installer.exe
+        dest: 'C:\temp
+pp_installer.exe'
       when: not npp_installed.stat.exists
 
     - name: Install Notepad++ silently
       win_package:
-        path: C:\temp
-pp_installer.exe
+        path: 'C:\temp
+pp_installer.exe'
         arguments: /S
         state: present
       when: not npp_installed.stat.exists
